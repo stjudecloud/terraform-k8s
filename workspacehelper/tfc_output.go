@@ -151,7 +151,7 @@ func (t *TerraformCloudClient) GetOutputsFromState(stateDownloadURL string) ([]*
 	outputValues := file.State.Modules[""].OutputValues
 	outputs := []*v1alpha1.OutputStatus{}
 	for key, value := range outputValues {
-		if !value.Sensitive {
+  //if !value.Sensitive {
 			if err != nil {
 				return outputs, fmt.Errorf("output value could not be converted to string, Error, %v", err)
 			}
@@ -159,7 +159,7 @@ func (t *TerraformCloudClient) GetOutputsFromState(stateDownloadURL string) ([]*
 			if statusValue != "" {
 				outputs = append(outputs, &v1alpha1.OutputStatus{Key: key, Value: statusValue})
 			}
-		}
+  //}
 	}
 	return outputs, nil
 }
