@@ -6,7 +6,8 @@ require (
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/go-logr/logr v0.1.0
 	github.com/hashicorp/go-tfe v0.11.1
-	github.com/hashicorp/terraform v0.14.3
+//	github.com/hashicorp/terraform v0.14.3
+	github.com/hashicorp/terraform v0.14.8
 	github.com/onsi/ginkgo v1.12.1
 	github.com/onsi/gomega v1.10.1
 	github.com/stretchr/testify v1.6.1
@@ -15,6 +16,7 @@ require (
 	k8s.io/apimachinery v0.18.6
 	k8s.io/client-go v10.0.0+incompatible
 	sigs.k8s.io/controller-runtime v0.6.3
+	sigs.k8s.io/controller-tools v0.3.0 // indirect
 )
 
 // Pinned to kubernetes-1.16.2
