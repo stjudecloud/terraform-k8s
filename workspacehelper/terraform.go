@@ -33,6 +33,9 @@ func CreateTerraformTemplate(workspace *v1alpha1.Workspace) ([]byte, error) {
 	{{- range .Spec.Outputs}}
 	output "{{.Key}}" {
 		value = module.operator.{{.ModuleOutputName}}
+    {{- if .Sensitive }}
+    sensitive = {{.Sensitive}}
+    {{- end}}
 	}
 	{{- end}}
 	module "operator" {
